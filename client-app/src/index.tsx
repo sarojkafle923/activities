@@ -1,7 +1,7 @@
 import "semantic-ui-css/semantic.min.css";
-import "./index.css";
+import "./app/layout/styles.css";
 
-import App from "./App";
+import App from "./app/layout/App";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 

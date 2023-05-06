@@ -1,21 +1,14 @@
 import { Button, Item, Label, Segment } from "semantic-ui-react";
 import React, { SyntheticEvent, useState } from "react";
 
-import { Activity } from "../../../app/models/activity";
+import { observer } from "mobx-react-lite";
+import { useStore } from "../../../app/stores/store";
 
-interface Props {
-  activities: Activity[];
-  selectActivity: (id: string) => void;
-  deleteActivity: (id: string) => void;
-  submitting: boolean;
-}
-export const ActivityList: React.FC<Props> = ({
-  activities,
-  selectActivity,
-  deleteActivity,
-  submitting,
-}) => {
+export const ActivityList: React.FC = observer(() => {
   const [target, setTarget] = useState("");
+  const { activityStore } = useStore();
+  const { selectActivity, deleteActivity, activitiesByDate, loading } =
+    activityStore;
 
   function handleActivityDelete(
     e: SyntheticEvent<HTMLButtonElement>,
@@ -28,7 +21,7 @@ export const ActivityList: React.FC<Props> = ({
   return (
     <Segment>
       <Item.Group divided>
-        {activities.map(activity => (
+        {activitiesByDate.map(activity => (
           <Item key={activity.id}>
             <Item.Content>
               <Item.Header as="a">{activity.title}</Item.Header>
@@ -51,7 +44,7 @@ export const ActivityList: React.FC<Props> = ({
                   content="Delete"
                   color="red"
                   name={activity.id}
-                  loading={submitting && target === activity.id}
+                  loading={loading && target === activity.id}
                   onClick={e => handleActivityDelete(e, activity.id)}
                 />
                 <Label basic content={activity.category} />
@@ -62,4 +55,4 @@ export const ActivityList: React.FC<Props> = ({
       </Item.Group>
     </Segment>
   );
-};
+});

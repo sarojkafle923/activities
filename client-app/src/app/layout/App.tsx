@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import { Container } from "semantic-ui-react";
 import { Fragment } from "react";
-import { HomePage } from "../../features/home/HomePage";
+import HomePage from "../../features/home/HomePage";
 import { NavBar } from "./NavBar";
 import { observer } from "mobx-react-lite";
 

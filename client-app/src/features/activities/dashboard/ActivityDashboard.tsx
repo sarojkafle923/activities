@@ -18,7 +18,7 @@ export const ActivityDashboard: React.FC = observer(() => {
   }, [activityRegistry.size, activityStore]);
 
   if (activityStore.loadingInitial) {
-    return <LoadingComponent />;
+    return <LoadingComponent content="Loading activities..." />;
   }
   return (
     <Grid>

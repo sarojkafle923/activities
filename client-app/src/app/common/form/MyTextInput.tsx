@@ -6,6 +6,7 @@ interface Props {
   placeholder: string;
   name: string;
   label?: string;
+  type?: string;
 }
 
 export const MyTextInput: React.FC<Props> = props => {

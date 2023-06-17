@@ -2,7 +2,7 @@ import { Navigate, RouteObject, createBrowserRouter } from "react-router-dom";
 
 import { ActivityDashboard } from "../../features/activities/dashboard/ActivityDashboard";
 import { ActivityDetails } from "../../features/activities/details/ActivityDetails";
-import { ActivityForm } from "../../features/activities/details/ActivityForm";
+import { ActivityForm } from "../../features/activities/form/ActivityForm";
 import App from "../layout/App";
 import { LoginForm } from "../../features/users/LoginForm";
 import { NotFound } from "../../features/Errors/NotFound";

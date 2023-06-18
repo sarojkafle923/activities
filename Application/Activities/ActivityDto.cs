@@ -1,6 +1,4 @@
-﻿using Application.Profiles;
-
-namespace Application.Activities
+﻿namespace Application.Activities
 {
     public class ActivityDto
     {
@@ -22,6 +20,6 @@ namespace Application.Activities
 
         public bool IsCancelled { get; set; } // Is the activity cancelled?
 
-        public ICollection<Profile> Attendees { get; set; } // List of profiles
+        public ICollection<AttendeeDto> Attendees { get; set; } // List of Atenndees
     }
 }

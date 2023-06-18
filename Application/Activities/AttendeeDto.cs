@@ -1,8 +1,6 @@
-﻿using Domain;
-
-namespace Application.Profiles
+﻿namespace Application.Activities
 {
-    public class Profile
+    public class AttendeeDto
     {
         public string Username { get; set; } // Username of the user
 
@@ -12,6 +10,5 @@ namespace Application.Profiles
 
         public string Image { get; set; } // Image of the user
 
-        public ICollection<Photo> Photos { get; set; } // Photos of the user
     }
 }

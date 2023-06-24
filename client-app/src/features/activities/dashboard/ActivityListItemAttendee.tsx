@@ -2,14 +2,19 @@ import { Image, List, Popup } from "semantic-ui-react";
 
 import { Link } from "react-router-dom";
 import { Profile } from "../../../app/models/profile";
-import { observer } from "mobx-react-lite";
 import { ProfileCard } from "../../profiles/ProfileCard";
+import { observer } from "mobx-react-lite";
 
 interface Props {
   attendees: Profile[];
 }
 export const ActivityListItemAttendee: React.FC<Props> = observer(
   ({ attendees }) => {
+    const styles = {
+      borderColor: "orange",
+      borderWidth: 3,
+    };
+
     return (
       <List horizontal>
         {attendees.map(attendee => (
@@ -23,6 +28,8 @@ export const ActivityListItemAttendee: React.FC<Props> = observer(
                 to={`/profiles/${attendee.username}`}
               >
                 <Image
+                  bordered
+                  style={attendee.following ? styles : null}
                   size="mini"
                   circular
                   src={attendee.image ?? "/assets/user.png"}

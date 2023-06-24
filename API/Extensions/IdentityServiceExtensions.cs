@@ -38,6 +38,27 @@ namespace API.Extensions
                         // Validate the token audience
                         ValidateAudience = false
                     };
+
+                    opt.Events = new JwtBearerEvents
+                    {
+                        // Add an event handler to validate the token when a message is received
+                        OnMessageReceived = context =>
+                        {
+                            // Get the token from the request
+                            var accessToken = context.Request.Query["access_token"];
+
+                            // Get the path from the request
+                            var path = context.HttpContext.Request.Path;
+
+                            // If the path starts with /chat, set the token
+                            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/chat"))
+                            {
+                                context.Token = accessToken;
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                 }
             );
 

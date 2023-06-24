@@ -38,7 +38,7 @@ export const ProfileEditForm: React.FC<Props> = observer(({ setEditMode }) => {
             type="submit"
             content="Update profile"
             loading={isSubmitting}
-            disabled={isSubmitting || !isValid || !dirty}
+            disabled={!isValid || !dirty}
             floated="right"
           />
         </Form>

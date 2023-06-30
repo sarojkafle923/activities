@@ -1,0 +1,23 @@
+# fly.toml app configuration file generated for event-book on 2023-07-01T02:01:32+10:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "event-book"
+primary_region = "syd"
+
+[build]
+  image = "sarojkafle5/event-book:latest"
+
+[env]
+  ASPNETCORE_URLS = "http://+:8080"
+  Cloudinary__ApiKey = "716337371995767"
+  Cloudinary__CloudName = "event-book"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

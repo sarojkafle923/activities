@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 
 import { Container } from "semantic-ui-react";
 import HomePage from "../../features/home/HomePage";
@@ -28,6 +28,7 @@ function App() {
 
   return (
     <Fragment>
+      <ScrollRestoration />
       <ModalContainer />
       <ToastContainer position="bottom-right" hideProgressBar theme="colored" />
       {location.pathname === "/" ? (

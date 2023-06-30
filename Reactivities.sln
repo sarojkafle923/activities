@@ -3,23 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D17380B9-8241-49E2-8112-44AEEDF96C42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{D17380B9-8241-49E2-8112-44AEEDF96C42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{42FB2F43-CA78-4630-BAC3-5622267DCE22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{42FB2F43-CA78-4630-BAC3-5622267DCE22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B3C05FB4-F159-40C6-8D5A-58D4A58DEDF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B3C05FB4-F159-40C6-8D5A-58D4A58DEDF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{623118D5-D4C2-4000-A39D-4271089B2FFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{623118D5-D4C2-4000-A39D-4271089B2FFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E07DF636-4A5C-42E6-8C9A-52091BEABC9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E07DF636-4A5C-42E6-8C9A-52091BEABC9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B16C169-AD57-4FD1-A6EB-81BA32B36F14}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D17380B9-8241-49E2-8112-44AEEDF96C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +45,11 @@ Global
 		{E07DF636-4A5C-42E6-8C9A-52091BEABC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07DF636-4A5C-42E6-8C9A-52091BEABC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07DF636-4A5C-42E6-8C9A-52091BEABC9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EA13784-9EFB-42FB-AB46-FD842385D3D1}
 	EndGlobalSection
 EndGlobal

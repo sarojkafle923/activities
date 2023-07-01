@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function TestErrors() {
-  const baseUrl = process.env.REACT_APP_URL;
+  const baseUrl = "http://localhost:5000/api/";
   const [errors, setErrors] = useState(null);
 
   function handleNotFound() {

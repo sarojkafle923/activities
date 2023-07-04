@@ -17,6 +17,10 @@ namespace API.Extensions
             {
                 // Remove the requirement for a non-alphanumeric character in the password
                 opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireDigit = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequiredUniqueChars = 0;
                 opt.User.RequireUniqueEmail = true;
             })
 
